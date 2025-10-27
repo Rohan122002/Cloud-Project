@@ -35,7 +35,7 @@
           </elementProp>
           <elementProp name="ThinkTime" elementType="Argument">
             <stringProp name="Argument.name">ThinkTime</stringProp>
-            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -168,7 +168,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">${ThinkTime}</stringProp>
