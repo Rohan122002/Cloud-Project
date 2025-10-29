@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building Docker Image for JMeter...'
-                    sh 'docker build -t jmeter-docker .'
+                    bat 'docker build -t jmeter-docker .'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running JMeter Test in Docker...'
-                    sh 'docker run --rm -v "$PWD/jmeter/results":/jmeter/results jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx -l /jmeter/results/result.jtl -e -o /jmeter/results/html'
+                    bat 'docker run --rm -v "$PWD/jmeter/results":/jmeter/results jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx -l /jmeter/results/result.jtl -e -o /jmeter/results/html'
                 }
             }
         }
