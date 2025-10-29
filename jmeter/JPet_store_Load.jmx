@@ -30,7 +30,7 @@
           </elementProp>
           <elementProp name="PaceTime" elementType="Argument">
             <stringProp name="Argument.name">PaceTime</stringProp>
-            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.value">4000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ThinkTime" elementType="Argument">
