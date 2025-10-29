@@ -22,8 +22,10 @@ pipeline {
                 script {
                     echo 'Running JMeter Test in Docker...'
                     bat """
-docker run --rm -v "%CD%\\jmeter\\results":/jmeter/results jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx -l /jmeter/results/result.jtl -e -o /jmeter/results/html
-"""
+                    docker run --rm ^
+                    -v "D:/My computer/Cloud_Project/jmeter/Results":/jmeter/results ^
+                    jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx ^
+                    -l /jmeter/results/result.jtl -e -o /jmeter/results/html """
 
                 }
             }
