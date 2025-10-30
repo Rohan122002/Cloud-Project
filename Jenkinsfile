@@ -25,7 +25,7 @@ pipeline {
                     docker run --rm ^
                     -v "D:/My computer/Cloud_Project/jmeter/Results":/jmeter/results ^
                     jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx ^
-                    -l /jmeter/results/result.jtl -e -o /jmeter/results/html """
+                    -l /jmeter/results/result2.jtl -e -o /jmeter/results/html2 """
 
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
 
     post {
         always {
-            echo 'Pipeline completeddddd.'
+            echo 'Pipeline completeddddd very good.'
         }
     }
 }
