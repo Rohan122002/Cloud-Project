@@ -33,14 +33,14 @@ pipeline {
 
         stage('Archive Reports') {
             steps {
-                archiveArtifacts artifacts: 'jmeter/results/html/**', fingerprint: true
+                archiveArtifacts artifacts: 'jmeter/results/html2/**', fingerprint: true
             }
         }
     }
 
     post {
         always {
-            echo 'Pipeline completed.'
+            echo 'Pipeline completeddddd.'
         }
     }
 }
