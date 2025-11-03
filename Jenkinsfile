@@ -25,7 +25,7 @@ pipeline {
                     docker run --rm ^
                     -v "D:/My computer/Cloud_Project/jmeter/Results":/jmeter/results ^
                     jmeter-docker -n -t /jmeter/JPet_store_Smoke.jmx ^
-                    -l /jmeter/results/result3.jtl -e -o /jmeter/results/html3 """
+                    -l /jmeter/results/SMOKE_V1.jtl -e -o /jmeter/results/Smoke_HTML """
 
                 }
             }
