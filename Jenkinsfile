@@ -24,8 +24,8 @@ pipeline {
                     bat """
                     docker run --rm ^
                     -v "D:/My computer/Cloud_Project/jmeter/Results":/jmeter/results ^
-                    jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx ^
-                    -l /jmeter/results/result2.jtl -e -o /jmeter/results/html2 """
+                    jmeter-docker -n -t /jmeter/JPet_store_Smoke.jmx ^
+                    -l /jmeter/results/result3.jtl -e -o /jmeter/results/html3 """
 
                 }
             }
