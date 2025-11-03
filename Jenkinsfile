@@ -25,7 +25,7 @@ pipeline {
                     docker run --rm ^
                     -v "D:/My computer/Cloud_Project/jmeter/Results":/jmeter/results ^
                     jmeter-docker -n -t /jmeter/JPet_store_Smoke.jmx ^
-                    -l /jmeter/results/SMOKE_V1.jtl -e -o /jmeter/results/Smoke_HTML """
+                    -l /jmeter/results/SMOKE_V2.jtl -e -o /jmeter/results/Smoke_HTML_V2 """
 
                 }
             }
@@ -33,7 +33,7 @@ pipeline {
 
         stage('Archive Reports') {
             steps {
-                archiveArtifacts artifacts: 'jmeter/results/html2/**', fingerprint: true
+                archiveArtifacts artifacts: 'jmeter/results/Smoke_HTML_V2/**', fingerprint: true
             }
         }
     }
