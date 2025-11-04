@@ -1,5 +1,8 @@
 pipeline {
     agent { label 'ec2' }
+    tools {
+    git 'Git-Linux'
+}
 
     stages {
         stage('Checkout') {
@@ -25,7 +28,7 @@ pipeline {
                     docker run --rm ^
                     -v "D:/My computer/Cloud_Project/jmeter/Results":/jmeter/results ^
                     jmeter-docker -n -t /jmeter/JPet_store_Sanity.jmx ^
-                    -l /jmeter/results/Sanity_V1.jtl -e -o /jmeter/results/Sanity_HTML_V1 """
+                    -l /jmeter/results/Sanity_V.jtl -e -o /jmeter/results/Sanity_HTML_V1 """
 
                 }
             }
