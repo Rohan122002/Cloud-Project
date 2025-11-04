@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'ec2' }
 
     stages {
         stage('Checkout') {
@@ -31,11 +31,11 @@ pipeline {
             }
         }
 
-        stage('Archive Reports') {
-            steps {
-                archiveArtifacts artifacts: 'jmeter/results/**', fingerprint: true
-            }
-        }
+        // stage('Archive Reports') {
+        //     steps {
+        //         archiveArtifacts artifacts: 'jmeter/results/**', fingerprint: true
+        //     }
+        // }
     }
 
     post {
